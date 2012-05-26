@@ -86,11 +86,11 @@
 </ul>
 <h2 id="ssh">SSH</h2>
 <h3 id="installing-ssh">Installing ssh</h3>
-<p><code>sudo apt-get install openssh</code></p>
+<p><code>sudo apt-get install openssh-client</code></p>
 <h3 id="connecting-to-server">Connecting to server</h3>
 <p><code>$ ssh username@hostname</code></p>
 <h3 id="public-key-authentication">Public key authentication</h3>
-<p><code>ssh-keygen -t rsa</code> The private key is at <code>~/.ssh/id_rsa</code> while the private key is at <code>~/.ssh/id_rsa.pub</code> The server needs your public key to authenticate the connection.</p>
+<p><code>ssh-keygen -t rsa</code> The private key is at <code>~/.ssh/id_rsa</code> while the public key is at <code>~/.ssh/id_rsa.pub</code> The server needs your public key to authenticate the connection.</p>
 <h2 id="version-control">Version Control</h2>
 <ul>
 <li>central VCS v/s Distributed VCS</li>
@@ -140,7 +140,7 @@
 <h3 id="fork-merge-pull">Fork, Merge, Pull</h3>
 <p>This is what Github follows. People create their own fork version of the repo, and send back pull requests</p>
 <h3 id="shared-repository">Shared Repository</h3>
-<p>A single repository shared among various people can be used successfully if the project is closed, and has known developers This is mainly for <a href="github.com/sdslabs">organizations</a></p>
+<p>A single repository shared among various people can be used successfully if the project is closed, and has known developers This is mainly for <a href="github.com/sdslabs">organizations</a> and trusted developers</p>
 <h3 id="branching-model">Branching Model</h3>
 <p>Mainly from <a href="http://nvie.com/posts/a-successful-git-branching-model/">here</a><br />Topics include branches, stable, hotfix, release, development, feature branch etc.</p>
 <h2 id="github">Github</h2>
@@ -155,14 +155,18 @@
 <li>Online Editing as well (press <code>e</code> on a file)</li>
 </ul>
 <h2 id="some-other-things">Some other things</h2>
+<p>A few more git commands</p>
 <ul>
 <li><code>git log</code> allows you to see your history</li>
 <li><code>git log --oneline</code> gives single line history</li>
 <li><code>git log --pretty</code> gives better output</li>
 <li><code>git log --graph</code> shows your commit graph</li>
-<li>Git GUI Systems - <code>gitg</code>, <code>git-cola</code>, <code>qgit</code>, <code>giggle</code> and the windows git-gui as well.</li>
+<li>Git GUI Systems - <code>gitg</code>, <code>git-cola</code>, <code>qgit</code>, <code>giggle</code> and the windows git-gui as</li>
+<li>Mac - <a href="http://gitboxapp.com/">Gitbox</a>, <a href="http://www.sourcetreeapp.com/">SourceTree</a>, <a href="http://mac.github.com/">Github for Mac</a></li>
 <li><code>.gitignore</code> file to store system specific stuff (configuration, databases, temp files, cache, build)</li>
+<li><code>tig</code> is an awesome commit browser that runs on the command line.</li>
 </ul>
+<p>To install any of the packages mentioned above, just run <code>sudo apt-get install package</code> in ubuntu.</p>
 <h2 id="redmine">Redmine</h2>
 <ul>
 <li>Create user accounts (Registration)</li>
@@ -187,8 +191,19 @@
 </ol>
 <p>Remember, an empty commit message aborts the commit. Also the best way to commit easily is:</p>
 <p><code>git commit -m &quot;Commit Message Here&quot;</code> to just type the commit message on the command line, and leave out all the hassle of the editor</p>
+<p>To learn how to use vim effectively, type 'vimtutor' in terminal.</p>
+<h2 id="faster-git-resources">Faster Git Resources</h2>
+<p>Git allows you to defined aliases for certain commands. These faster ways of using git create several additional commands for git, such as <code>git release</code>, and <code>ga</code> etc</p>
+<ul>
+<li><a href="http://madebynathan.com/2011/10/18/git-shortcuts-like-youve-never-seen-before/">SCM Breeze</a> #awesome</li>
+<li><a href="https://github.com/visionmedia/git-extras">Git Extras</a></li>
+<li><a href="http://pyrtsa.posterous.com/aligning-your-git-logs">Git Aligned Logs</a></li>
+<li><a href="https://github.com/holygeek/git-number">Git-Number</a> - Similar to SCM Breeze</li>
+</ul>
+<p>Also see <code>tig</code>, which is a cli repo browser for git.</p>
 <h1 id="resources-on-git">Resources on Git</h1>
 <ul>
+<li>[Git for beginners: the definitive practical guide] (http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide)</li>
 <li><a href="http://help.github.com/git-cheat-sheets/">Git Cheat Sheets &amp; Excellent starting guide</a></li>
 <li><a href="http://www.kernel.org/pub/software/scm/git/docs/everyday.html">Everyday GIT With 20 Commands Or So</a></li>
 <li><a href="http://progit.org/book/">Pro Git Book</a></li>
@@ -202,7 +217,7 @@
 <li><a href="http://learn.github.com/p/intro.html">Git Video Tutorials by Github</a></li>
 <li><a href="http://pragprog.com/book/tsgit/pragmatic-version-control-using-git">Pragmatic Version Control using Git</a></li>
 <li><a href="http://whygitisbetterthanx.com/">Why Git is Better than X</a> - Replace X with any VCS</li>
-<li><a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching Model</a></li>
+<li><a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching Model</a> #mustread</li>
 </ul>
 </body>
 </html>
